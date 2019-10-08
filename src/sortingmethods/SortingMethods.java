@@ -23,6 +23,7 @@ public class SortingMethods {
         sm.printArray("Unsorted array", array);
         
         sm.BubbleSort(array.clone());
+        sm.ImprovedBubbleSort(array.clone());
         sm.InsertionSort(array.clone());
         sm.MergeSort(array.clone(),array.length);
         sm.CountSort(array.clone());
@@ -68,6 +69,23 @@ public class SortingMethods {
                     arr[i+1] = temp;
                 }
         this.printArray("Bubble sort",arr);
+        return arr;
+    }
+    
+    //Improved Bubble sort - best case in O(n) and worst case in O(n^2)
+    public int[] ImprovedBubbleSort(int[] arr){
+        boolean flag = true;
+        for(int j=0; j<arr.length-1 && flag;j++){
+            flag = false;
+            for (int i = 0; i < arr.length-1; i++)
+                if(arr[i] > arr[i+1]){
+                    int temp = arr[i];
+                    arr[i] = arr[i+1];
+                    arr[i+1] = temp;
+                    flag = true;
+                }
+        }
+        this.printArray("Improved Bubble sort",arr);
         return arr;
     }
     

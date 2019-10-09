@@ -19,7 +19,7 @@ public class SortingMethods {
         SortingMethods sm = new SortingMethods();
         int[] array = sm.generateRandomArray();
 
-        //System.out.println("-".repeat(array.length*5));
+        System.out.println("-".repeat(array.length*5));
         sm.printArray("Unsorted array", array);
 
         sm.BubbleSort(array.clone());
@@ -55,12 +55,12 @@ public class SortingMethods {
     //Method to print arrays
     public void printArray(String title, int[] arr) {
         System.out.println(title.concat(" | n=" + arr.length));
-        //System.out.println("-".repeat(arr.length*5));
+        System.out.println("-".repeat(arr.length*5));
         for (int x : arr) {
             System.out.printf("%5d", x);
         }
         System.out.println("");
-        //System.out.println("-".repeat(arr.length*5));
+        System.out.println("-".repeat(arr.length*5));
     }
 
     //Bubble sort
